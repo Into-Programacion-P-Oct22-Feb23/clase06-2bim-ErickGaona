@@ -31,10 +31,9 @@ public class Ejemplo02 {
                     suma);
 
         } else {
-            
-                System.out.println("ERROR");
 
-            
+            System.out.println("ERROR");
+
         }
     }
 
