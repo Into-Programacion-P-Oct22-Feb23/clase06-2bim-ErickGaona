@@ -5,8 +5,8 @@
  */
 package ejemplos;
 
-import java.security.SecureRandom;
-// import java.security.*;
+ import java.security.SecureRandom;
+ //import java.security.*;
 
 /**
  *
@@ -25,13 +25,13 @@ public class Ejemplo01 {
                 suma);
     }
     
-    public static int obtenerNumero() {
+    public static int obtenerNumero() {// static por que no son objetos
         // objeto generador de números aleatorios
         SecureRandom numerosAleatorios = new SecureRandom();
         
         // Returns a pseudorandom, uniformly distributed int value 
         // between 0 (inclusive) and the specified value (exclusive)
-        int valorAleatorio = numerosAleatorios.nextInt(5);
+        int valorAleatorio = numerosAleatorios.nextInt(50);
         return valorAleatorio;
     }
     
