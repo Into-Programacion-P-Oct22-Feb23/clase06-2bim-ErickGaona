@@ -14,29 +14,38 @@ import java.util.Scanner;
  * @author reroes
  */
 public class Ejemplo02 {
-    static int valor;
+    
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner entrada = new Scanner(System.in);
         System.out.println("Ingrese limite");
-        valor=entrada.nextInt();
-        int valorA = obtenerNumero(); // 3
-        int valorB = obtenerNumero(); // 2
+        int valor=entrada.nextInt();
+        if(valor>0 ){
+        int valorA = obtenerNumero(valor); // 3
+        int valorB = obtenerNumero(valor); // 2
         int suma = obtnerSuma(valorA, valorB);
         
         System.out.printf("La suma de %d + %d es igual a: %d\n", 
                 valorA,
                 valorB,
                 suma);
+        
+        }else{
+            if(valor<0){
+        System.out.println("ERROR");
+    
+    
+    }
+        }
     }
     
-    public static int obtenerNumero() {
+    public static int obtenerNumero(int c) {
         // objeto generador de números aleatorios
         SecureRandom numerosAleatorios = new SecureRandom();
         
         // Returns a pseudorandom, uniformly distributed int value 
         // between 0 (inclusive) and the specified value (exclusive)
-        int valorAleatorio = numerosAleatorios.nextInt(valor);
+        int valorAleatorio = numerosAleatorios.nextInt(c);
         return valorAleatorio;
     }
     
